@@ -13,6 +13,8 @@ DEBUG = True
 
 
 # Database name --  fyurrdb
+# Database port -- 5434
+
 SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:petertalk@localhost:5434/fyurrdb'
 SQLALCHEMY_TRACK_MODIFICATIONS = False 
 

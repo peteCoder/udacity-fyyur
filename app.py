@@ -21,12 +21,13 @@ import datetime
 
 app = Flask(__name__)
 moment = Moment(app)
-app.config.from_object('config')
+
 
 
 # TODO: connect to a local postgresql database
-# app.config["SQLALCHEMY_DATABASE_URI"] = 'postgresql://postgres:petertalk@localhost:5434/fyurrdb'
-# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+# Connected to database in config.py file
+app.config.from_object('config')
 
 db = SQLAlchemy(app)
 

@@ -2,10 +2,9 @@ from datetime import datetime
 from flask_wtf import Form
 from wtforms import StringField, SelectField, SelectMultipleField, DateTimeField, BooleanField
 from wtforms.validators import DataRequired, AnyOf, URL
-from markupsafe import escape
 
-# enum classes 
-from enum_form_validation import GenreEnum, coerce_for_enum
+
+
 
 class ShowForm(Form):
     artist_id = StringField(
@@ -96,8 +95,7 @@ class VenueForm(Form):
         # TODO implement enum restriction
         'genres', validators=[DataRequired()],
         
-        # choices=[(v, escape(v)) for v in GenreEnum],
-        # coerce=coerce_for_enum(GenreEnum)
+    
         
         
         choices=[
